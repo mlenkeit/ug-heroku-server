@@ -1,8 +1,14 @@
 language: node_js
 node_js:
-  - "8"
+- '8'
 script:
-  - npm run test
+- npm run test
 cache:
   directories:
-    - node_modules
+  - node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: cf/XxZLoVuvQWEdn2KhOWp5syTVhiXp5UoOE+FntSxUSHlfXHLbQjXfJKFC8EeKiQgqTfzHtFf94FnUMa33fZfehaGX1roFqEI5DSnrswG+qwQkNlCk6hUyLu19oFW4CiwKInA94jUE/aysXHHf7waBkpGWSVocVhe02eSGCGXK2b4YpIWuD/k8PDu3T6nwMRARlS9tCIB5BEGO7PS8Hxot+WRhlhBaMmpGOMzRc9rdi3uDN2FuHfVlVg0n/FJFizQNm8UY3lgBQSy/1FhTrMdI1pXf+fJLDnMs9tjP6ZhMk0enrLBPfo597hFOnx1DtatqsPYK1sjE3lHrY2RLZUvrkOC2NDiieJznXL3RC8hDJl1uk7EWTJ/3lyN6JXVwyjVVxzwF7GM6EUDxO9ZmnDDG7D8e0qRihvQqBKXzNdhJIopvYgLpaGV0HrGcjUWICUyyM8gHYBhTbPHQQRYWEKzKxyOxF4ekYe+veWBDLk7bNDvi0kaYm2THn75dyhzo+joe4PWxHX/e+SmGZvZULxWL8qxW8KnRYUPu6JiNLLTIwRcKC72RCs0SEBNXguvKXZ9AIowWscs80x99xaQZyiQNA9LJeMp22ZH+sxBWlKQsmWjDXTP8weA6fOpySc109oSoLEtgTboeJ/YP7FNK2TP9hVQmDx1w362K0nwdzmAA=
+  app: ml-ug
+  skip_cleanup: true
