@@ -1,0 +1,20 @@
+{
+  "name": "ug-heroku-server",
+  "version": "0.1.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified yet\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mlenkeit/ug-heroku-server.git"
+  },
+  "keywords": [],
+  "author": "Maximilian Lenkeit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mlenkeit/ug-heroku-server/issues"
+  },
+  "homepage": "https://github.com/mlenkeit/ug-heroku-server#readme"
+}
