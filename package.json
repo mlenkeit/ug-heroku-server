@@ -4,6 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
+    "start": "echo \"Nothing to start yet\"",
     "test": "echo \"Error: no test specified yet\" && exit 0"
   },
   "repository": {
