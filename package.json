@@ -4,6 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
+    "lint": "eslint lib test",
     "start": "echo \"Nothing to start yet\"",
     "test": "npm run test:unit",
     "test:unit": "mocha test/unit/**/*.spec.js --recursive",
@@ -24,6 +25,8 @@
     "express": "4.15.5"
   },
   "devDependencies": {
+    "eslint": "4.7.2",
+    "eslint-plugin-mocha": "4.11.0",
     "mocha": "3.5.3",
     "supertest": "3.0.0"
   }
