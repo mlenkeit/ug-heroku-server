@@ -7,7 +7,7 @@
     "lint": "eslint lib test",
     "start": "node index.js",
     "test": "npm run test:unit",
-    "test:unit": "mocha test/unit/**/*.spec.js --recursive",
+    "test:unit": "mocha test/unit/** --recursive",
     "testrunner": "mocha test/**/* --recursive --watch"
   },
   "repository": {
