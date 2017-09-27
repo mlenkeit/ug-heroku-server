@@ -8,7 +8,7 @@
     "start": "echo \"Nothing to start yet\"",
     "test": "npm run test:unit",
     "test:unit": "mocha test/unit/**/*.spec.js --recursive",
-    "testrunner": "mocha test/**/*.spec.js --recursive --watch"
+    "testrunner": "mocha test/**/* --recursive --watch"
   },
   "repository": {
     "type": "git",
@@ -22,12 +22,19 @@
   },
   "homepage": "https://github.com/mlenkeit/ug-heroku-server#readme",
   "dependencies": {
-    "express": "4.15.5"
+    "body-parser": "1.18.2",
+    "check-types": "7.3.0",
+    "express": "4.15.5",
+    "mongodb": "2.2.31"
   },
   "devDependencies": {
+    "chai": "4.1.2",
+    "chai-as-promised": "7.1.1",
     "eslint": "4.7.2",
     "eslint-plugin-mocha": "4.11.0",
     "mocha": "3.5.3",
+    "sinon": "4.0.0",
+    "sinon-chai": "2.13.0",
     "supertest": "3.0.0"
   }
 }
