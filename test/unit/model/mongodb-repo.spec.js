@@ -25,10 +25,6 @@ describe('model/mongo-repo', function() {
       .then(col => col.deleteMany());
   });
   
-  it('test', function() {
-    
-  });
-  
   describe('#findOneById', function() {
     
     context('when the record exists', function() {
