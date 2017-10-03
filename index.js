@@ -1,6 +1,7 @@
 'use strict';
 
 const check = require('check-types');
+const winston = require('winston');
 
 check.assert.string(process.env.MONGODB_URI, 'Missing mandatory env var MONGODB_URI');
 const MONGODB_URI = process.env.MONGODB_URI;
@@ -21,4 +22,5 @@ const app = require('./lib/app')({
 });
 
 app.listen(PORT, () => {
+  winston.info(`Server started on port ${PORT}`);
 });
