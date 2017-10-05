@@ -22,5 +22,5 @@ const app = require('./lib/app')({
 });
 
 app.listen(PORT, () => {
-  winston.info(`Server started on port ${PORT}`);
+  winston.log('info', `Server started on port ${PORT}`);
 });
