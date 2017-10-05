@@ -8,7 +8,10 @@
     "start": "node index.js",
     "test": "npm run test:unit",
     "test:unit": "mocha test/unit/** --recursive",
-    "testrunner": "mocha test/**/* --recursive --watch"
+    "test:system": "MONGODB_URI=mongodb://localhost:27017 PORT=50482 mocha test/system/** --recursive --timeout=10000",
+    "testrunner": "mocha test/**/* --recursive --watch",
+    "testrunner:unit": "mocha test/unit/** --recursive --watch",
+    "testrunner:system": "MONGODB_URI=mongodb://localhost:27017 PORT=50482 mocha test/system/** --recursive --watch"
   },
   "repository": {
     "type": "git",
