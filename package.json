@@ -4,6 +4,8 @@
   "description": "",
   "private": true,
   "scripts": {
+    "coverage:unit": "istanbul cover _mocha --report cobertura --report html -- test/unit/** --colors --recursive",
+    "coverage-check": "istanbul check-coverage --statements 95 --functions 95 --lines 95",
     "lint": "eslint lib test",
     "start": "node index.js",
     "test": "npm run test:unit",
@@ -37,6 +39,7 @@
     "chai-as-promised": "7.1.1",
     "eslint": "4.7.2",
     "eslint-plugin-mocha": "4.11.0",
+    "istanbul": "0.4.5",
     "mocha": "3.5.3",
     "request": "2.83.0",
     "request-promise-native": "1.0.5",
