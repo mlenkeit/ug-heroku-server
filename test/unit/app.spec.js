@@ -95,7 +95,7 @@ describe('app', function() {
         
         beforeEach(function() {
           this.travelRepo.update
-            .withArgs(this.travelDestination)
+            .withArgs(sinon.match.has('_id', this.travelDestination.name))
             .resolves(this.travelDestination);
         });
         
@@ -106,7 +106,7 @@ describe('app', function() {
             .expect(204)
             .expect(() => {
               expect(this.travelRepo.update)
-                .to.be.calledWith(this.travelDestination);
+                .to.be.calledWith(sinon.match(this.travelDestination));
             })
             .end(done);
         });
@@ -124,7 +124,7 @@ describe('app', function() {
         
         beforeEach(function() {
           this.travelRepo.update
-            .withArgs(this.travelDestination)
+            .withArgs(sinon.match.has('_id', this.travelDestination.name))
             .resolves(null);
         });
         
