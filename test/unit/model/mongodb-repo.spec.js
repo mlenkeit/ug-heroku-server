@@ -61,15 +61,21 @@ describe('model/mongo-repo', function() {
     
     context('when the record exists', function() {
       
-      it('updates the record', function() {
+      beforeEach(function() {
         this.doc = {
           _id: 123,
-          john: 'doe'
+          name: 'john doe'
         };
+        const p = this.repo.update(this.doc);
+        return p;
+      });
+      
+      it('updates the record', function() {
+        this.doc.name = 'peter griffin';
         const p = this.repo.update(this.doc);
         return p.then(record => {
           expect(record).to.have.property('_id', this.doc._id);
-          expect(record).to.have.property('john', this.doc.john);
+          expect(record).to.have.property('name', this.doc.name);
         });
       });
     });
